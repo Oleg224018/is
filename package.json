@@ -1,18 +1,28 @@
 {
-  "name": "is-components-new",
-  "description": "Is components",
-  "version": "0.0.4",
+  "name": "@wfrefre/ui-library",
+  "description": "UI components library for Vue 3",
+  "version": "1.0.0",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
+  "exports": { 
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
-    "dist/*"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "dev": "storybook dev -p 6006 --no-open",
-    "build": "vite build && storybook build",
+    "build": "vite build",
     "lint": "eslint **/*.{js,ts,vue} && stylelint src/**/*.{scss,vue}",
     "ts": "vue-tsc --noEmit"
   },
@@ -62,5 +72,10 @@
   "engines": {
     "npm": "11",
     "node": "24"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Oleg224018/is.git"
+  },
+  "homepage": "https://github.com/Oleg224018/is#readme"
 }
