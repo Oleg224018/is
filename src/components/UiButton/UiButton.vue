@@ -31,6 +31,7 @@ const props = withDefaults(defineProps<IProps>(), {
   color: var(--color-white);
   background: var(--color-primary);
   border-radius: 16px;
+  border: 2px solid #000;
 
   &[data-layout='secondary'] {
     color: var(--color-primary);
